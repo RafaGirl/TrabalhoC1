@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='mensagemAguarde'>Aguarde. Carregando.............</p>
+    <script>
+        var covid19
+        function carregarCovidCSV() {
+            fetch('./time_series_covid19_confirmed_global.csv')
+            .then(x => x.text())
+            .then( text => { 
+                const arrLines = text.split("\n")
+                covid19 = arrLines.map( line => line.split(','))
+                console.log('Vetor Covid')
+                console.log(covid19)
+                document.getElementById('mensagemAguarde').value = 'Teste'
+            });
+        }
+        window.addEventListener("load", carregarCovidCSV());
+    </script>
+</body>
+
+</html>

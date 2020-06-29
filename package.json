@@ -1,0 +1,20 @@
+{
+  "name": "covid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start http://127.0.0.1:8088 && node ./node_modules/http-server/bin/http-server -p 8088"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "csvtojson": "^2.0.10",
+    "http-server": "^0.12.1",
+    "json2csv": "^5.0.1"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}
